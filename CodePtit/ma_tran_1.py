@@ -6,12 +6,12 @@ for i in range(n):
 k = int(input())
 
 sum1 = 0
-for i in range(0, n-1):
-    for j in range(0, n-i-1):
+for i in range(n):
+    for j in range(i+1, n):
         sum1 += a[i][j]
 sum2 = 0
-for i in range(1, n):
-    for j in range(n-i, n):
+for i in range(n):
+    for j in range(0, i):
         sum2 += a[i][j]
 # print(sum1, sum2)
 

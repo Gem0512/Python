@@ -1,13 +1,10 @@
 def check_prime_number(n):
-    flag = 1
-    if (n < 2):
-        flag = 0
-        return flag
-    for p in range(2, n):
-        if n % p == 0:
-            flag = 0
-            break
-    return flag
+    str1 = str(n)
+    str2 = str1[::-1]
+    if (str1 == str2):
+        return True
+    else:
+        return False
 
 
 n, m = input().split()
@@ -25,7 +22,7 @@ for i in range(0, n):
             if maz < a[i][j]:
                 maz = a[i][j]
             ok = 1
-if ok == 0:
+if ok == 0 or len(str(maz)) < 2:
     print("NOT FOUND")
 else:
     print(maz)
